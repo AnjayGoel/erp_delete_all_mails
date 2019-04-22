@@ -9,7 +9,7 @@ if (xmlHttp.readyState==4 && xmlHttp.status==200) {
         ele.innerHTML=xmlHttp.responseText
         var ids = ele.getElementsByTagName('div')[5].getElementsByTagName("tr")
         params2+=ids[0].id
-        for (let i=1;i<4;i++) {
+        for (let i=1;i<ids.lenght;i++) {
             params2+=','+ids[i].id
         }
         xmlHttp.open("POST",'https://erp.iitkgp.ac.in/IMail/emailAjax.jsp',false);
